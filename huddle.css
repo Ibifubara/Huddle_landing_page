@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    background: #fff;
+}
+
+header{
+    background: hsl(193, 100%, 96%);
+    color: hsl(208, 11%, 55%);
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+nav{
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn{
+    color: #000;
+    background: #fff;
+    padding: 15px 60px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 13px;
+    box-shadow: 3px 5px 10px 3px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover{
+    opacity: 0.7;
+}
+
+.hero{
+    background: url('/images/bg-hero-desktop.svg');
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 0;
+    gap: 20px;
+}
+
+.hero img{
+    width: 700px;
+}
+
+h1{
+    font-size: 2.5rem;
+    color: hsl(192, 100%, 9%);
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+header p{
+    color: hsl(192, 100%, 9%);
+    margin-bottom: 40px;
+}
+
+.hero .btn, .small-modal .btn{
+    color: #fff;
+    background: hsl(322, 100%, 66%);
+    margin-top: 20px;
+}
+
+main{
+    position: relative;
+}
+
+main img{
+    width: 400px;
+}
+
+main .container{
+     padding: 60px 0 200px;
+}
+
+main .options{
+    padding: 60px;
+    margin: 30px 0;
+    border-radius: 20px;
+    box-shadow: 3px 5px 10px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+main h3{
+    color: hsl(192, 100%, 9%);
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+main p{
+    color: hsl(208, 11%, 55%);
+    max-width: 450px;
+}
+
+main .options:nth-of-type(2) img{
+    order: 1;
+}
+
+main .options:nth-of-type(2) div{
+    order: 2;
+}
+
+footer{
+    background: hsl(192, 100%, 9%);
+    color: #fff;
+    padding-top: 100px;
+}
+
+footer .container{
+    padding: 60px 0;
+}
+
+.footer-logo{
+    padding-bottom: 40px;
+    height: 75px;
+}
+
+footer .info{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.details div{
+    margin-bottom: 20px;
+}
+
+.details img{
+    margin-right: 30px;
+}
+
+.details p{
+    display: inline;
+}
+
+.links{
+    display: flex;
+    justify-content: space-between;
+}
+
+.links a:hover{
+    text-decoration: underline;
+}
+
+.links div:nth-of-type(1){
+    padding-right: 100px;
+}
+
+li{
+    list-style-type: none;
+    padding-bottom: 20px;
+}
+
+.tiny-text{
+    margin-top: 60px;
+    text-align: right;
+    font-size: 10px;
+}
+
+.small-modal{
+    width: 40%;
+    padding: 60px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 3px 5px 10px 3px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    bottom: -80px;
+    left: 400px;
+    z-index: 3;
+    background:#fff;
+    
+}
+
+.small-modal h3{
+    margin-bottom: 50px;
+}
+
+.socials a img{
+    height: 27px;
+    width: 27px;
+}
+
+.socials a{
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    padding: 20px;
+}
+
+.socials a:hover{
+    background-color: hsl(322, 100%, 66%);
+}
+
+/* footer::before{
+    content: '.small-modal';
+    position: absolute;
+    top: -30px;
+    left: 200px;
+} */
+
+@media(max-width: 680px){
+
+    header .container{
+        width: 100%;
+    }
+
+    header .btn{
+        padding: 10px 20px;
+    }
+
+    .hero{
+        background: url('./images/bg-hero-mobile.svg');
+        flex-direction: column;
+        text-align: center;
+    }
+
+    h1{
+        font-size: 1.9rem;
+    }
+
+    .hero img{
+        width: 300px;
+        margin-top: 80px;
+    }
+
+    nav img{
+        width: 150px;
+    }
+
+    main .options{
+        flex-direction: column;
+    }
+
+    main .options img{
+        order: 1;
+        width: 100%;
+    }
+
+    main .options div{
+        order: 2;
+    }
+
+    footer .info{
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .links{
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    .socials, .tiny-text{
+        align-self: center;
+        text-align: center;
+    }
+
+    .small-modal{
+        left: 40px;
+        padding: 25px;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .small-modal .btn{
+        padding: 10px 30px;
+    }
+}
